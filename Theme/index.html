@@ -81,8 +81,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-   aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-header">
@@ -92,31 +91,36 @@
             </h4>
          </div>
          <div class="modal-body">
-            <!-- Add some text here -->
-		<form class="form-horizontal" role="form">
-  		<div class="form-group">
-    			<label for="inputEmail1" class="col-sm-2 control-label">Email</label>
-    			<div class="col-sm-10">
-      				<input type="email" class="form-control" id="inputEmail1" placeholder="abc@xyz.com">
-    			</div>
-  		</div>
-  		<div class="form-group">
-    			<label for="inputPassword" class="col-sm-2 control-label">Password</label>
-    			<div class="col-sm-10">
-      				<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-    			</div>
-  		</div>
-		<h4><a id = "signinpassword" href='#'>Forgot Password</a></h4>
-	</form>
+					<!-- Add some text here -->
+				<form class="form-horizontal" role="form" name="myForm" id="myForm" action="newpage.php" method="POST">
+				 
+					<div class="form-group">
+							<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="abc@xyz.com"/>
+							</div>
+					</div>
+					<div class="form-group">
+							<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password"/>
+							</div>
+					</div>
+					<h4><a id = "signinpassword" href='#'>Forgot Password123</a></h4>
+					<div class="modal-footer">	
+						<button type="button" name="signin" id="signin" value="signin" onclick="myFunction()" class="btn btn-primary" class="close" data-dismiss="modal" formmethod="post" formaction="newpage.html">
+						   Sign In
+						</button>
+					</div>
+					<!--	
+					<input type="button" onclick="myFunction()" value="Submit form" id="signin" value="signin">
+					-->
+				</form>
          </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" class="close" data-dismiss="modal">
-               Sign In
-            </button>
-         </div>
+         
       </div><!-- /.modal-content -->
-</div><!-- /.modal -->
-		</div>
+	</div><!-- /.modal -->
+</div>
 
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" 
@@ -125,53 +129,59 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" 
-   aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
         
          <div class="modal-body">
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal" role="form" name="myForm1" id="myForm1" action="newpage.php" method="POST">
 			
 		<div class="btn-group">
 		<h3>Who you are?</h3>
-		  <button type="button" class="btn btn-primary">Individual</button>
-		  <button type="button" class="btn btn-primary">Organization</button>
+		  <button type="button" class="btn btn-primary" id="individual" name="individual" value="individual" >Individual</button>
+		  <button type="button" class="btn btn-primary" id="organisation" name="organisation" value="organisation">Organization</button>
 		</div>	<div class="form-group">
 
 			<br/>
 
 			
 
-    			<label for="inputName" class="col-sm-2 control-label">Name</label>
+    			<label for="inputName1" class="col-sm-2 control-label">Name</label>
     			<div class="col-sm-10">
-      				<input type="text" class="form-control" id="inputName" placeholder="Name">
+      				<input type="text" class="form-control" name="inputName1" id="inputName1" placeholder="Name" required>
     			</div>
   		</div>
 
 		<div class="form-group">
-    			<label for="inputEmail2" class="col-sm-2 control-label">Email</label>
+    			<label for="inputEmail1" class="col-sm-2 control-label">Email</label>
     			<div class="col-sm-10">
-      				<input type="email" class="form-control" id="inputEmail2" placeholder="abc@xyz.com" required>
+      				<input type="email" class="form-control" name="inputEmail1"  id="inputEmail1" placeholder="abc@xyz.com" required>
     			</div>
   		</div>
 		
 		<div class="form-group">
-    			<label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+    			<label for="inputPassword1" class="col-sm-2 control-label">Password</label>
     			<div class="col-sm-10">
-      				<input type="text" class="form-control" id="inputphone" placeholder="+91-XXX XXX XXXX" required>
+      				<input type="email" class="form-control" name="inputPassword1"  id="inputPassword1" placeholder="password" required>
+    			</div>
+  		</div>
+		
+		<div class="form-group">
+    			<label for="inputPhone1" class="col-sm-2 control-label">Phone</label>
+    			<div class="col-sm-10">
+      				<input type="text" class="form-control" name="inputphone1" id="inputphone1" placeholder="+91-XXX XXX XXXX" required>
     			</div>
   		</div>
 
 		<div class="container">
-			<label for="inputAddress" class="col-sm-2 control-label">Address</label>
-			<textarea class="form-control" rows="6"></textarea>
+			<label for="inputAddress1" class="col-sm-2 control-label">Address</label>
+			<textarea class="form-control" rows="6" name="inputAddress1" id="inputAddress1"></textarea>
 		</div>
 		<br/>
 		<button type="button" class="btn btn-default" 
                data-dismiss="modal">Close
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" onclick="myFunction1()" value="signup">
                Submit changes
             </button>
 		
@@ -405,5 +415,15 @@
 	
 	});
 	</script>
+	<script>
+function myFunction() {
+    document.getElementById("myForm").submit();
+}
+</script>
+<script>
+function myFunction1() {
+    document.getElementById("myForm1").submit();
+}
+</script>
 
 </html>
